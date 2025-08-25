@@ -1,0 +1,31 @@
+                        MOVIE CONTROLLER API
+CREATE MOVIE:
+-------------
+curl -X POST "http://localhost:8080/api/movies" -H "Content-Type: application/json"  -d "{ \"name\": \"Java Fundamentals\", \"genre\": \"Programming Language\" }"
+
+curl -X POST "http://localhost:8080/api/movies" -H "Content-Type: application/json"  -d "{ \"name\": \"Python MasterClass\", \"genre\": \"Programming Language\" }"
+
+curl -X POST "http://localhost:8080/api/movies" -H "Content-Type: application/json"  -d "{ \"name\": \"Tensor Flow Crash Course\", \"genre\": \"AI\" }"
+
+
+FETCH ALL MOVIES:
+-----------------
+
+curl -X GET http://localhost:8080/api/movies/all
+
+FETCH MOVIES BY GENRE:
+---------------------
+curl -X GET "http://localhost:8080/api/movies/genre/Programming%20Language"
+
+                    RATING CONTROLLER API
+
+FETCH ALL RATINGS :
+------------------
+
+curl -X GET http://localhost:8080/api/ratings/all
+
+ADD A RATING:
+------------
+curl -X POST "http://localhost:8080/api/movies/1/ratings" -H "Content-Type: application/json" -d "{ \"criticRating\": 3, \"submitterName\": \"Jeeva\" }"
+
+curl -X POST "http://localhost:8080/api/movies/1/ratings" -H "Content-Type: application/json" -d "{ \"criticRating\": 9, \"submitterName\": \"Eswar\" }"
